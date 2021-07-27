@@ -43,11 +43,11 @@ public class Runner {
         while (true) {
             if (sc.hasNextInt()) {
                 int number = sc.nextInt();
-                if (number > 0) return number;
+                if (number > 1200) return number;
             } else {
                 sc.next();
             }
-            System.out.println(ANSI_RED+"Ошибка ввода числа!!!"+ANSI_RESET);
+            System.out.println(ANSI_RED+"Ошибка ввода числа!!!\r\n введите корректную дату >1200 года"+ANSI_RESET);
         }
     }
 
