@@ -84,13 +84,13 @@ public class Book {
     }
 
     public void view() {
-        System.out.println(
-                getId() + " "
-                + author + " "
-                + title + " "
-                + publisher + " "
-                + year + " "
-                + page + " "
+        System.out.print(
+                getId() + "\t"
+                + author + "\t"
+                + title + "\t"
+                + publisher + "\t"
+                + year + "\t"
+                + page + "\t"
                 + cost);
     }
 }

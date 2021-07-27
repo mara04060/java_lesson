@@ -87,15 +87,11 @@ public class Runner {
         int i =0;
         for (Book arr: arrObj) {
             if(arr != null) {
-
-                System.out.printf(
-                        " ID=" + arr.getId() + "\t" +
-                                arr.getTitle() + "\t" +
-                                arr.getAuthor() + "\t" +
-                                arr.getPublisher() + "\t" +
-                                arr.getPage() + "\t" +
-                                arr.getYear() + "\t" +
-                                arr.getCost() + " \r\n"
+//Форматированный вывод на экран элеиентов Обьекта
+                System.out.printf("%3d %35s %20s %20s  %5d  %4d  %2f \r\n",
+                        arr.getId(), arr.getTitle(),arr.getAuthor(),
+                        arr.getPublisher() ,
+                        arr.getPage(),arr.getYear(),arr.getCost()
                 );
                 i++;
             }
