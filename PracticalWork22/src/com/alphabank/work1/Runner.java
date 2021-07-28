@@ -2,6 +2,7 @@ package com.alphabank.work1;
 
 import com.alphabank.work2.Employee;
 import com.alphabank.work3.ID;
+import com.alphabank.work4.Calcarea;
 
 import java.util.Scanner;
 
@@ -46,6 +47,13 @@ public class Runner {
         ID objID_Three = new ID();
         System.out.println("objID_One = "+ objID_Three.getID());
         System.out.println("nextID = "+ ID.getNextID());
+
+//        Площадь круга:
+        Calcarea objCalc = new Calcarea();
+        double scircle = objCalc.areaCircle(12.34);
+        int ssquare = objCalc.areaSquare(11);
+        System.out.println("Площадь круга: "+scircle);
+        System.out.println("Площадь квадрата:" +ssquare);
     }
 
     public int inputNumber() {
