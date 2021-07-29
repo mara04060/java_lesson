@@ -7,16 +7,12 @@ public class ID {
     private static int nextID;
 
     static {
-//        Разово генерит случаянное число nextID и все...
         setNextID();
     }
 
     public ID(){
-        id = nextID +1;
-    }
-
-    public void setID(int id){
-        this.id = id;
+        id = nextID;
+        nextID++;
     }
 
     public int getID(){
@@ -30,7 +26,7 @@ public class ID {
     private static void setNextID(){
 //        nextID = (int)(Math.random()*100) +1;
         //сказали только Random & nextInt
-        nextID = new Random(1).nextInt(100);
+        nextID = new Random().nextInt(100) + 1;
     }
 
 }

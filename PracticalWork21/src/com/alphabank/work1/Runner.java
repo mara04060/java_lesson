@@ -87,8 +87,7 @@ public class Runner {
         int i =0;
         for (Book arr: arrObj) {
             if(arr != null) {
-//Форматированный вывод на экран элеиентов Обьекта
-                System.out.printf("%3d %35s %20s %20s  %5d  %4d  %2f \r\n",
+                System.out.printf("%3d %35s %20s %20s  %5d  %4d  %.2f \r\n",
                         arr.getId(), arr.getTitle(),arr.getAuthor(),
                         arr.getPublisher() ,
                         arr.getPage(),arr.getYear(),arr.getCost()
@@ -155,9 +154,6 @@ public class Runner {
             System.out.println(ANSI_GREEN+"Найдено издательство: "+ANSI_RESET);
             arrView(arrayResult);
         }
-
-
-
     }
 
 

@@ -8,29 +8,20 @@ public class Employee {
     private static int numberOfEmployees = 0;
 
     {
-//        Вызывается столько раз сколько обьектов создается, каждый раз
-//            при создании обьекта
-        addNumberOfEmployees();
+        numberOfEmployees++;
     }
 
-    static {
-//        Вызывается ПЕРВЫМ разово за все вызовы и создания всех обьектов
-//          Ура человечество создано!!!
-    }
 
     public Employee() {
-//        Заполним человечка значениями по умолчанию
-        setLastName("Last");
-        setFirstName("Firstname");
-        setOccupation("Ocuppation");
-        setTelephone("not Phone");
+        this("Name", "LastName","Director","+38060");
     }
 
-    public Employee(String family, String name, String occupation, String telephone){
-        setFirstName(name);
-        setLastName(family);
-        setOccupation(occupation);
-        setTelephone(telephone);
+    public Employee(String firstName, String lastName, String occupation, String telephone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.occupation = occupation;
+        this.telephone = telephone;
+//        numberOfEmployees++; ///
     }
 
     public String getFirstName() {
@@ -67,13 +58,5 @@ public class Employee {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
-    }
-
-    /**
-     * Если сделать этот метод общедоступным то можно не создавая
-     * человека увеличивать рождаемость населения
-     */
-    private static void addNumberOfEmployees() {
-        Employee.numberOfEmployees++;
     }
 }
