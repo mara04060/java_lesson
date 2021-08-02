@@ -16,6 +16,14 @@ public class Employee {
         this("Name", "LastName","Director","+38060");
     }
 
+    public Employee(String firstName, String lastName){
+        this(firstName, lastName, "Director", "+38067");
+    }
+
+    public Employee (String firstName, String lastName,String telephone){
+        this(firstName, lastName, "Director", telephone);
+    }
+
     public Employee(String firstName, String lastName, String occupation, String telephone) {
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,8 +1,6 @@
 package com.alphabank.work1;
 
-import com.alphabank.work2.Employee;
-import com.alphabank.work3.ID;
-import com.alphabank.work4.Calcarea;
+import com.alphabank.work4.Calculate;
 
 import java.util.Scanner;
 
@@ -47,8 +45,8 @@ public class Runner {
 
 
 //        Площадь круга:
-        double scircle = Calcarea.areaCircle(19.00);
-        int ssquare = Calcarea.areaSquare(11);
+        double scircle = Calculate.areaCircle(19.00);
+        int ssquare = Calculate.areaSquare(11);
         System.out.printf("Площадь круга: %.2f %n", scircle);
         System.out.println("Площадь квадрата:" +ssquare);
     }
