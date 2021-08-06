@@ -1,8 +1,8 @@
 package com.alphabank.work2;
 
 public class Rectangle extends Shape {
-    private Double width;
-    private Double height;
+    private double width;
+    private double height;
 
     public Rectangle(String color, Double width, Double height) {
         super(color);
@@ -13,14 +13,13 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public Double calcArea() {
+    public double calcArea() {
         return (double)(int)((height * width)*100)/100;
     }
 
     @Override
     public String toString() {
         return super.toString()+", Widht="+ width +
-                ", Height=" +height+
-                ", Area="+calcArea();
+                ", Height=" +height;
     }
 }

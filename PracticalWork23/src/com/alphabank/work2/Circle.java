@@ -12,12 +12,11 @@ public class Circle extends Shape{
 
     @Override
     public String toString(){
-        return super.toString()+", radius="+ radius +
-                ", Area=" +calcArea();
+        return super.toString()+", radius="+ radius;
     }
 
     @Override
-    public Double calcArea(){
+    public double calcArea(){
         return (double)(int)((radius * radius * 2 * Math.PI)*100)/100;
     }
 

@@ -7,13 +7,14 @@ public class Shape {
         this.color = color;
     }
 
-    public Double calcArea(){
+    public double calcArea(){
         return 0.0;
     }
 
     @Override
     public String toString(){
         return "class=" + getClass().getSimpleName() +
-                ": color=" +color;
+                ": color=" +color +
+                ", Area=" +calcArea();
     }
 }

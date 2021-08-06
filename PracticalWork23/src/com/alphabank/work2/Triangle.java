@@ -16,7 +16,7 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public Double calcArea(){
+    public double calcArea(){
         double p = (a+b+c)/2;
         return (double)(int)((Math.sqrt(p*(p-a)*(p-b)*(p-c)))*100)/100;
     }
@@ -25,7 +25,6 @@ public class Triangle extends Shape {
     public String toString(){
         return super.toString()+", a="+ a +
                 ", b=" +b+
-                ", c="+c+
-                ", Area="+calcArea();
+                ", c="+c;
     }
 }
