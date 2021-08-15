@@ -12,7 +12,7 @@ public class Runner {
         Train train = new Train(5);
         TrainSchedule trainSchedule = new TrainSchedule(5);
 
-        System.out.println(" Пустых элементов = " + trainSchedule.getTrains().length);
+        System.out.println(" Пустых элементов создано: " + trainSchedule.getTrains().length);
 
         train.setStationArrival("NewStation");
         train.setStationDispatch("MoveStation");
@@ -74,13 +74,13 @@ public class Runner {
     }
 
     public String inpText(String text, Scanner scanner){
-        System.out.println(" Введите "+text+ " :");
+        System.out.print(" Введите "+text+ " :");
         return scanner.nextLine();
     }
 
     /*
-Изменить расцветку консоли, выделить найденные элементы
-*/
+    Изменить расцветку консоли, выделить найденные элементы
+    */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";

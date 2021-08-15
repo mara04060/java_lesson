@@ -2,7 +2,7 @@ package com.alphabank.work3;
 
 public class TrainSchedule {
     private Train[] trains;
-    private int indexArr = 0;
+    private static int indexArr = 0;
 
     public TrainSchedule(int amount) {
         this.trains = new Train[amount];
