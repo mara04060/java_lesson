@@ -1,4 +1,5 @@
 package com.alphabank.work3;
+import java.util.Arrays;
 
 public class Train {
     private int number;
@@ -6,9 +7,7 @@ public class Train {
     private String stationArrival;
     private String timeDispatch;
     private String timeArrival;
-    public enum days {
-            SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
-    };
+    public DaysOfWeek[] days;
 
     public Train(int number) {
         this.number = number;
@@ -18,9 +17,6 @@ public class Train {
         return number;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
 
     public String getStationDispatch() {
         return stationDispatch;
@@ -54,14 +50,34 @@ public class Train {
         this.timeArrival = timeArrival;
     }
 
+
+    public DaysOfWeek[] getDays() {
+        return this.days;
+    }
+
+    public void setDays(DaysOfWeek[] days) {
+        this.days = days;
+    }
+
+    public boolean searchDay(DaysOfWeek day) {
+        for (DaysOfWeek oneDay:days) {
+            if(oneDay== day){
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return "Train{" +
                 "number=" + number +
-                ", stationDispatch='" + stationDispatch + '\'' +
-                ", stationArrival='" + stationArrival + '\'' +
-                ", timeDispatch='" + timeDispatch + '\'' +
-                ", timeArrival='" + timeArrival + '\'' +
-                '}';
+                ", stationDispatch=" + stationDispatch +
+                ", stationArrival=" + stationArrival +
+                ", timeDispatch=" + timeDispatch +
+                ", timeArrival=" + timeArrival  +
+                ", days=" + Arrays.toString(days) +
+                "}";
     }
 }
+
