@@ -17,9 +17,9 @@ public class Runner {
     }
 
     private void copyFile(String name_old, String name_new) throws IOException {
-        String patch = "D:\\Work\\Java CodeSpace 2 AlphaBank\\Lesson 16\\";
-        Path oldFile = Paths.get(patch + name_old);
-        Path newFile = Paths.get(patch + name_new);
+        String path = "D:\\Work\\Java CodeSpace 2 AlphaBank\\Lesson 16\\";
+        Path oldFile = Paths.get(path + name_old);
+        Path newFile = Paths.get(path + name_new);
         Files.copy(oldFile, newFile, StandardCopyOption.REPLACE_EXISTING);
     }
 

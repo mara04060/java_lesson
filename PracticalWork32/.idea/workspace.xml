@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d34206a6-f280-4d7b-a1ca-29b4ec4e0480" name="Default Changelist" comment="" />
+    <list default="true" id="33d3b3b6-7ee0-4975-bb7e-a9742ffc2fc0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,17 +15,23 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1xrr3HFeX5Gxq0rOqALvSeTJ8CG" />
+  <component name="ProjectId" id="1y0J00r8s4S41Y3upu3fJd85v4P" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PracticalWork32" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\Java CodeSpace AlphaBank\PracticalWork32" />
+      <recent name="D:\Work\Java CodeSpace AlphaBank\PracticalWork32\src\com\alphabank\work1" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.alphabank.work4" />
-      <recent name="com.alphabank.work3" />
       <recent name="com.alphabank.work2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Java CodeSpace AlphaBank\PracticalWork32\src\com\alphabank\work3" />
+      <recent name="D:\Work\Java CodeSpace AlphaBank\PracticalWork32\src\com\alphabank\work1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -42,9 +48,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.alphabank.Task31" />
-      <module name="PracticalWork31" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;D:\Work\Java CodeSpace AlphaBank\Test.java&quot;" />
+      <option name="MAIN_CLASS_NAME" value="com.alphabank.Task32" />
+      <module name="PracticalWork32" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -62,16 +68,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d34206a6-f280-4d7b-a1ca-29b4ec4e0480" name="Default Changelist" comment="" />
-      <created>1631123847367</created>
+      <changelist id="33d3b3b6-7ee0-4975-bb7e-a9742ffc2fc0" name="Default Changelist" comment="" />
+      <created>1631382344521</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631123847367</updated>
-      <workItem from="1631123855500" duration="8307000" />
-      <workItem from="1631253203788" duration="14589000" />
-      <workItem from="1631377872679" duration="1279000" />
-      <workItem from="1631465961030" duration="7928000" />
-      <workItem from="1631545658366" duration="9915000" />
+      <updated>1631382344521</updated>
+      <workItem from="1631382348620" duration="6307000" />
+      <workItem from="1631441389369" duration="11457000" />
+      <workItem from="1631455437335" duration="1103000" />
+      <workItem from="1631464747795" duration="1191000" />
+      <workItem from="1631467734877" duration="1323000" />
+      <workItem from="1631545695198" duration="5992000" />
     </task>
     <servers />
   </component>

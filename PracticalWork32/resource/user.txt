@@ -1,0 +1,3 @@
+User{firstName='Ivanov', lastName='Ivan', age=29}
+User{firstName='Petrov', lastName='Oleg', age=23}
+User{firstName='Default', lastName='LastName', age=1}

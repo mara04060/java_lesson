@@ -1,12 +1,12 @@
 package com.alphabank;
 
-import com.alphabank.work4.Runner;
+import com.alphabank.work3.Runner;
 
 import java.io.IOException;
 
-public class Task31 {
+public class Task32 {
 
     public static void main(String[] args) throws IOException {
-        new Runner().run(args);
+	    new Runner().run();
     }
 }
