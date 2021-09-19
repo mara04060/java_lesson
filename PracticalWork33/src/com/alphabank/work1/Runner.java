@@ -10,15 +10,23 @@ public class Runner {
     public void run(){
 //        Init Array
         arrayInt(20);
-        System.out.println( toIntString() );
-        sortByInteger(array);
-        System.out.println( toIntString() );
+        System.out.println( Arrays.toString(array) );
+//        sortByInteger(array);
+//        или через Лямбда выражение
+//       Arrays.sort(array, (a, b)->(b-a) );
+//       или через встроенный
+        Arrays.sort(array, Comparator.reverseOrder());
+        System.out.println( Arrays.toString(array) );
 
 //        Init List String
         listString(10);
-        System.out.println( toListString() );
-        sortByString(list);
-        System.out.println( toListString() );
+        System.out.println( list );
+//        Класический метод
+        Collections.sort(list, (String l1, String l2) -> {
+            return -(l1.compareTo(l2)); });
+//        Через компоратор
+        Collections.sort(list, Comparator.reverseOrder());
+        System.out.println( list );
     }
 
     private int generateArray(){
@@ -36,7 +44,8 @@ public class Runner {
 //        list.add(Integer.toString(random.nextInt(50)));
 
     private void sortByInteger(Integer[] arrays){
-        Arrays.sort(arrays, (a, b) ->  a - b );
+//        Сортировка от большего к меньшему
+        Arrays.sort(arrays, (a, b) ->  b - a );
     }
 
     private void listString(int size){

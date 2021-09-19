@@ -1,6 +1,6 @@
 package com.alphabank;
 
-import com.alphabank.work4.Runner;
+import com.alphabank.work1.Runner;
 
 public class Task33 {
 
