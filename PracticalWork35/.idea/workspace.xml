@@ -12,7 +12,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/alphabank" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PracticalWork22" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -79,6 +79,7 @@
       <updated>1633163387372</updated>
       <workItem from="1633163392033" duration="2882000" />
       <workItem from="1633174019231" duration="13029000" />
+      <workItem from="1633252692949" duration="7598000" />
     </task>
     <servers />
   </component>

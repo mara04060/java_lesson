@@ -86,7 +86,7 @@ public class ControllerBooks {
             try {
                 int proc = Validator.checkProcent(procent);
                 return proc;
-                } catch (ArrayIndexOutOfBoundsException exp) {
+            } catch (ArrayIndexOutOfBoundsException exp) {
                 if (exp.getMessage().equals("proc")) {
                     viewBooks.printMessage(ViewConstants.ERROR_PROCENT);
                 }
@@ -95,37 +95,53 @@ public class ControllerBooks {
     }
 
     private ArrayList<Book> processedAuthor() {
+        int searchElement = 0;
         String search = viewBooks.getSearchAuthor();
         ArrayList<Book> searchArr = new ArrayList<>();
         for (Book book : serviceBooks.getBooks()) {
-            if (book.getAuthor().toLowerCase().lastIndexOf(search.toLowerCase()) > 0) {
+            if (book != null &&
+                    book.getAuthor().toLowerCase().indexOf(search.toLowerCase()) >= 0) {
                 searchArr.add(book);
+                searchElement++;
             }
+        }
+        if (searchElement == 0) {
+            viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND +"\n" + search.toLowerCase() );
         }
         return searchArr;
     }
 
     private ArrayList<Book> processedPublisher() {
+        int searchElement = 0;
         String search = viewBooks.getSearchPublisher();
         ArrayList<Book> searchArr = new ArrayList<>();
         for (Book book : serviceBooks.getBooks()) {
-            if (book.getPulisher().toLowerCase().lastIndexOf(search.toLowerCase()) > 0) {
+            if (book != null &&
+                    book.getPulisher().toLowerCase().lastIndexOf(search.toLowerCase()) >= 0) {
                 searchArr.add(book);
+                searchElement++;
             }
+        }
+        if (searchElement == 0) {
+            viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND);
         }
         return searchArr;
     }
 
     private ArrayList<Book> processedYear() {
+        int searchElement = 0;
         ArrayList<Book> searchArr = new ArrayList<>();
         try {
             int year = Validator.checkYear(viewBooks.getSearchYear());
             for (Book book : serviceBooks.getBooks()) {
-                if (book.getYear() >= year) {
+                if (book != null && book.getYear() >= year) {
                     searchArr.add(book);
+                    searchElement++;
                 }
             }
-
+            if (searchElement == 0) {
+                viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND);
+            }
         } catch (ArrayIndexOutOfBoundsException exp) {
             if (exp.getMessage().equals("year")) {
                 viewBooks.printMessage(ViewConstants.ERROR_YEAR);
