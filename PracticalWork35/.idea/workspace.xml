@@ -13,6 +13,13 @@
       <classPattern testedClass="$CLASS$" testClass="test/$CLASS$Test" />
     </testPatterns>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="JUnitClassTemplateConfiguration">
     <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="false" />
     <option name="DONT_SHOW_METHODS_DIALOG_IF_ONLY_ONE_METHOD" value="false" />
@@ -58,7 +65,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/alphabank/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -130,7 +137,8 @@
       <workItem from="1633252692949" duration="7598000" />
       <workItem from="1633360066065" duration="5189000" />
       <workItem from="1633418874245" duration="163000" />
-      <workItem from="1633419779592" duration="17188000" />
+      <workItem from="1633419779592" duration="23281000" />
+      <workItem from="1633532756105" duration="8482000" />
     </task>
     <servers />
   </component>

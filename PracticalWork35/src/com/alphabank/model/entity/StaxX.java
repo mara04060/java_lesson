@@ -49,21 +49,27 @@ public class StaxX {
                         }
                     }
                     if (event.asStartElement().getName().getLocalPart()
+                            .equals(Declar.Book.PUBLISHER)) {
+                        event = eventReader.nextEvent();
+                        book.setPulisher(event.asCharacters().getData());
+                        continue;
+                    }
+                    if (event.asStartElement().getName().getLocalPart()
                             .equals(Declar.Book.YEAR)) {
                         event = eventReader.nextEvent();
-                        book.setYear(Integer.parseInt( event.asCharacters().getData() ));
+                        book.setYear(Integer.parseInt(event.asCharacters().getData()));
                         continue;
                     }
                     if (event.asStartElement().getName().getLocalPart()
                             .equals(Declar.Book.PAGE)) {
                         event = eventReader.nextEvent();
-                        book.setPage(Integer.parseInt( event.asCharacters().getData() ));
+                        book.setPage(Integer.parseInt(event.asCharacters().getData()));
                         continue;
                     }
                     if (event.asStartElement().getName().getLocalPart()
                             .equals(Declar.Book.PRICE)) {
                         event = eventReader.nextEvent();
-                        book.setCost(Double.parseDouble( event.asCharacters().getData() ));
+                        book.setCost(Double.parseDouble(event.asCharacters().getData()));
                         continue;
                     }
 
@@ -74,9 +80,6 @@ public class StaxX {
                         items.add(book);
                     }
                 }
-
-
-
             }
         } catch (FileNotFoundException | XMLStreamException e) {
             e.printStackTrace();
@@ -84,7 +87,7 @@ public class StaxX {
 
 
         return items;
-   }
+    }
 
     @SuppressWarnings({"unchecked", "null"})
     public void saveXML(String configFile, ArrayList<Book> declare) throws Exception {
