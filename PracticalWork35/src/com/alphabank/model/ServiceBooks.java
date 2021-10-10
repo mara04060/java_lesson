@@ -8,6 +8,7 @@ import javax.naming.directory.InvalidSearchControlsException;
 import java.nio.charset.MalformedInputException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ServiceBooks {
     private ArrayList<Book> books;
@@ -29,16 +30,10 @@ public class ServiceBooks {
     }
 
     public List searchAuthor(String search) throws InvalidSearchControlsException {
-        int searchElement = 0;
-        List<Book> searchArr = new ArrayList<>();
-        for (Book book : getBooks()) {
-            if (book != null &&
-                    book.getAuthor().toLowerCase().contains(search.toLowerCase())) {
-                searchArr.add(book);
-                searchElement++;
-            }
-        }
-        if (searchElement == 0) {
+        List<Book> searchArr = books.stream()
+                .filter(book -> book.getAuthor().contains(search.toLowerCase()))
+                .collect(Collectors.toList());
+        if (searchArr.size() < 1) {
             throw new InvalidSearchControlsException("author");
         }
         return searchArr;

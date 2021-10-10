@@ -63,6 +63,7 @@
   </component>
   <component name="ProjectId" id="1ywWym6Yr6rKI5OJcAc0ZVH1CCz" />
   <component name="PropertiesComponent">
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -139,6 +140,9 @@
       <workItem from="1633418874245" duration="163000" />
       <workItem from="1633419779592" duration="23281000" />
       <workItem from="1633532756105" duration="8482000" />
+      <workItem from="1633705130692" duration="8628000" />
+      <workItem from="1633855929722" duration="5312000" />
+      <workItem from="1633861970743" duration="6999000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,6 @@ import com.alphabank.view.ViewBooks;
 import com.alphabank.view.ViewConstants;
 
 import javax.naming.directory.InvalidSearchControlsException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerBooks {
@@ -31,8 +30,11 @@ public class ControllerBooks {
                 case "author":
                 case "publisher":
                 case "year":
+
                     List searchData = processedSearch(command);
-                    viewBooks.printBooks(ConverterBooks.convert(searchData));
+                    if (searchData != null && searchData.size() > 0) {
+                        viewBooks.printBooks(ConverterBooks.convert(searchData));
+                    }
                     break;
                 case "exit":
                     System.exit(1);
@@ -69,53 +71,52 @@ public class ControllerBooks {
     }
 
     public void processedEdit() {
-        int proc = processValidateProcent();
+        int proc = 0;
+        try {
+            proc = processValidateProcent();
+        } catch (ArrayIndexOutOfBoundsException exp) {
+            viewBooks.printMessage(ViewConstants.ERROR_PROCENT);
+        }
         for (Book book : serviceBooks.getBooks()) {
             book.setCost((double) Math.round((Math.round(book.getCost() * 100) + Math.round(book.getCost() * proc))) / 100);
         }
     }
-    public int processValidateProcent() {
-        while (true) {
-            String procent = viewBooks.getInfoProcent();
-            try {
-                int proc = Validator.checkProcent(procent);
-                return proc;
-            } catch (ArrayIndexOutOfBoundsException exp) {
-                if (exp.getMessage().equals("proc")) {
-                    viewBooks.printMessage(ViewConstants.ERROR_PROCENT);
-                }
-            }
-        }
+
+    public int processValidateProcent() throws ArrayIndexOutOfBoundsException {
+        String procent = viewBooks.getInfoProcent();
+        return Validator.checkProcent(procent);
     }
 
 
-    public List processedSearch(String command)  {
-        try {
+    public List processedSearch(String command) {
+
+        while (true) {
             switch (command) {
                 case "author":
-                    return new ServiceBooks().searchAuthor(viewBooks.getSearchAuthor());
+                    try {
+                        return new ServiceBooks().searchAuthor(viewBooks.getSearchAuthor());
+                    } catch (InvalidSearchControlsException exp) {
+                        viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND);
+                    }
+                    break;
 
                 case "publisher":
-                    return new ServiceBooks().searchPublisher(viewBooks.getSearchPublisher());
-
+                    try {
+                        return new ServiceBooks().searchPublisher(viewBooks.getSearchPublisher());
+                    } catch (InvalidSearchControlsException exp) {
+                        viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_PUBLISHER);
+                    }
+                    break;
                 case "year":
-                    return new ServiceBooks().searchYear(Validator.checkYear(viewBooks.getSearchYear()));
+                    try {
+                        int year = Validator.checkYear(viewBooks.getSearchYear());
+                        return new ServiceBooks().searchYear(year);
+                    } catch (ArrayIndexOutOfBoundsException | InvalidSearchControlsException exp) {
+                        viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND);
+                    }
 
-            }
-
-        } catch (InvalidSearchControlsException exp) {
-            if(exp.equals("author")) {
-                viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_NOT_FOUND + "\n");
-            }
-            if(exp.equals("publisher")) {
-                viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_PUBLISHER + "\n");
-            }
-            if(exp.equals("year")) {
-                viewBooks.printMessage(ViewConstants.FORMAT_SEARCH_YEAR + "\n");
             }
         }
-        return null;
+
     }
-
-
 }
