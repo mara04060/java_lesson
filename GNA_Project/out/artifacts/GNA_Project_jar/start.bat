@@ -1,1 +1,0 @@
-java -jar .\GNA_Project.jar

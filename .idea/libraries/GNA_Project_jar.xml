@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="GNA_Project_jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/GNA_Project/out/artifacts/GNA_Project_jar/GNA_Project_win1251.jar!/" />
+      <root url="jar://$PROJECT_DIR$/GNA_Project/out/artifacts/GNA_Project_jar/GNA_Project.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
